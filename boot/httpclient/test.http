@@ -1,0 +1,20 @@
+### 添加用户
+POST {{url}}/user/add
+Content-Type: application/json
+
+{
+    "name": "张三",
+    "age": 16,
+    "gender": 1
+}
+
+### 获取信息
+GET  {{url}}/user/all？
+
+### 获取指定用户信息
+POST  http://127.0.0.1:8080/user/get
+Content-Type: application/json
+
+{
+    "id": 1
+}

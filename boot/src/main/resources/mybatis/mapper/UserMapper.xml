@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.boot.mapper.UserMapper">
+    <insert id="addUser" parameterType="org.example.boot.entity.User">
+        INSERT INTO user (name, age, gender) VALUES (#{name}, #{age}, #{gender})
+    </insert>
+
+    <select id="getUserById" resultType="org.example.boot.entity.User">
+        SELECT * FROM user WHERE id = #{id}
+    </select>
+
+    <select id="getAllUsers" resultType="org.example.boot.entity.User">
+        SELECT * FROM user
+    </select>
+
+    <select id="getUserList" resultType="org.example.boot.entity.User">
+        SELECT * FROM user LIMIT #{offset}, #{pageSize}
+    </select>
+</mapper>

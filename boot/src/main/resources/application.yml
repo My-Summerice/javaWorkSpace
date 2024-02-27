@@ -1,0 +1,21 @@
+
+spring:
+  profiles:
+    active: dev
+#    active: '@profileActive@'
+
+  jpa:
+    show-sql: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/mydb?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+    username: root
+    password: summerice
+    driver-class-name: com.mysql.cj.jdbc.Driver
+server:
+  port: 8080
+
+
+
+mybatis:
+  # mapper文件路径
+  mapper-locations: classpath:mybatis/mapper/*.xml
