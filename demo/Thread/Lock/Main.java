@@ -17,7 +17,7 @@ public class Main {
     }
 
     // ReentrantLock
-    private ReentrantLock lock = new ReentrantLock(); // 需要保证多个线程使用的是同一个锁
+    private final ReentrantLock lock = new ReentrantLock(); // 需要保证多个线程使用的是同一个锁
 
     public void modifyPublicResources() {
 
@@ -38,6 +38,7 @@ public class Main {
         executorService.execute(() -> main.testMethod());
         executorService.execute(() -> main.testMethod());
         // 2. ReentrantLock
+        executorService.execute(() -> main.modifyPublicResources());
         executorService.execute(() -> main.modifyPublicResources());
         System.out.println(i);
         executorService.shutdown();

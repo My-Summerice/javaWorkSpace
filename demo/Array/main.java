@@ -5,6 +5,9 @@ import java.util.List;
 
 import static DataStructure.Array.Main.randomString;
 
+
+// todo: Arrays.asList() 的参数必须为对象数组，如果为基础数据类型的数组则只会被当为一个元素存入list
+//       比如传参为一个int数组 {1, 2, 3} 则转之后的list长度为1，第一个元素也就是这个int数组
 public class main {
 
     public static void main(String[] args) {

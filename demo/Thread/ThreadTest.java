@@ -27,6 +27,26 @@ public class ThreadTest {
         thread.start();
     }
 
+    /**
+     * 创建线程池的几种方式
+     * 阿里开发规范建议不要Executors创建线程池
+     * 线程池基本参数*****
+     * 线程池执行原理*****
+     *
+     * synchronized关键字
+     * 锁对象
+     * 修饰静态跟非静态的区别
+     * AQS
+     *
+     * 设计模式
+     *     单例，工厂，策略
+     *
+     */
+
+
+
+
+
     static void doThread() {
 
         MyThread myThread = new MyThread();
